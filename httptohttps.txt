@@ -1,0 +1,13 @@
+# HTTP to HTTPS Redirect Configuration
+
+# For NGINX
+server {
+    listen 80;
+    server_name yourdomain.com;
+    return 301 https://$host$request_uri;
+}
+
+# For Apache
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
