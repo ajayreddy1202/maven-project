@@ -1,5 +1,5 @@
 # HTTP to HTTPS Redirect Configuration
-
+Added dummy line
 # For NGINX
 server {
     listen 80;
